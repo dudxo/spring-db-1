@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class UncheckedTest {
 
-
 	@Test
 	void unchecked_cath() {
 		Service service = new Service();
@@ -59,7 +58,6 @@ public class UncheckedTest {
 			repository.call();
 		}
 	}
-
 
 	static class Repository {
 		public void call() {

@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CheckedTest {
 
-
 	@Test
 	void checked_catch() {
 		Service service = new Service();
@@ -16,11 +15,11 @@ public class CheckedTest {
 	}
 
 	@Test
-	void checked_throw(){
+	void checked_throw() {
 		Service service = new Service();
 
 		Assertions.assertThatThrownBy(() -> service.callThrow())
-				.isInstanceOf(MyCheckedException.class);
+			.isInstanceOf(MyCheckedException.class);
 	}
 
 	/**

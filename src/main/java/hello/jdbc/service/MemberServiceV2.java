@@ -34,16 +34,15 @@ public class MemberServiceV2 {
 			log.info("rollback ED");
 			throw new IllegalStateException(e);
 		} finally {
-			if(con != null) {
+			if (con != null) {
 				try {
-					con.setAutoCommit(true);	// 커넥션 풀은 항상 autocommit == true이기 때문에 반환 전 다시 원복
+					con.setAutoCommit(true);    // 커넥션 풀은 항상 autocommit == true이기 때문에 반환 전 다시 원복
 					con.close();
 				} catch (Exception e) {
 					log.info("error", e);
 				}
 			}
 		}
-
 
 	}
 
@@ -58,7 +57,7 @@ public class MemberServiceV2 {
 	}
 
 	private void validation(Member toMember) {
-		if(toMember.getMemberId().equals("ex")) {
+		if (toMember.getMemberId().equals("ex")) {
 			throw new IllegalStateException("이체중 예외 발생");
 		}
 	}

@@ -3,8 +3,6 @@ package hello.jdbc.service;
 import java.sql.SQLException;
 
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import hello.jdbc.domain.Member;
@@ -48,7 +46,7 @@ public class MemberServiceV3_2 {
 	}
 
 	private void validation(Member toMember) {
-		if(toMember.getMemberId().equals("ex")) {
+		if (toMember.getMemberId().equals("ex")) {
 			throw new IllegalStateException("이체중 예외 발생");
 		}
 	}

@@ -20,7 +20,7 @@ public class ConnectionTest {
 
 	@Test
 	void driverManager() throws SQLException {
-		Connection con1 = DriverManager.getConnection(URL, USERNAME, PASSWORD);		// getConnection마다 주입
+		Connection con1 = DriverManager.getConnection(URL, USERNAME, PASSWORD);        // getConnection마다 주입
 		Connection con2 = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
 		// con1 != con2
@@ -32,7 +32,7 @@ public class ConnectionTest {
 	void dataSourceDriverManager() throws SQLException {
 		//DriverManagerDataSource - 항상 새로운 커넥션 획득
 		// DataSource dataSource = new DriverManagerDataSource(URL, USERNAME, PASSWORD);
-		DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, USERNAME, PASSWORD);	// 생성 시점에 주입
+		DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, USERNAME, PASSWORD);    // 생성 시점에 주입
 		useDataSource(dataSource);
 	}
 

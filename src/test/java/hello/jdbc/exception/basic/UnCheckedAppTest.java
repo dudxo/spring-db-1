@@ -1,6 +1,5 @@
 package hello.jdbc.exception.basic;
 
-import java.net.ConnectException;
 import java.sql.SQLException;
 
 import org.assertj.core.api.Assertions;
@@ -32,13 +31,15 @@ public class UnCheckedAppTest {
 			networkClient.call();
 		}
 	}
+
 	static class NetworkClient {
-		public void call(){
+		public void call() {
 			throw new RuntimeConnectionException("연결 실패");
 		}
 	}
+
 	static class Repository {
-		public void call(){
+		public void call() {
 			try {
 				runSQL();
 			} catch (SQLException e) {

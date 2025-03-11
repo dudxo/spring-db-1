@@ -15,7 +15,6 @@ import org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator;
 import org.springframework.jdbc.support.SQLExceptionTranslator;
 
 import hello.jdbc.domain.Member;
-import hello.jdbc.repository.ex.MyDbException;
 import lombok.extern.slf4j.Slf4j;
 
 /**

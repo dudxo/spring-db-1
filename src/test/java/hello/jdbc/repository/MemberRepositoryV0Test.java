@@ -1,7 +1,5 @@
 package hello.jdbc.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.sql.SQLException;
 import java.util.NoSuchElementException;
 

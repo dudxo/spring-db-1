@@ -75,7 +75,7 @@ public class MemberRepositoryV3 {
 			rs = pstmt.executeQuery();
 
 			// rs.next()를 해야 실제 있는 데이터부터 시작
-			if(rs.next()) {
+			if (rs.next()) {
 				Member member = new Member();
 				member.setMemberId(rs.getString("member_id"));
 				member.setMoney(rs.getInt("money"));

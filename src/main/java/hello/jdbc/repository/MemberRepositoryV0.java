@@ -63,7 +63,7 @@ public class MemberRepositoryV0 {
 			rs = pstmt.executeQuery();
 
 			// rs.next()를 해야 실제 있는 데이터부터 시작
-			if(rs.next()) {
+			if (rs.next()) {
 				Member member = new Member();
 				member.setMemberId(rs.getString("member_id"));
 				member.setMoney(rs.getInt("money"));
@@ -137,23 +137,23 @@ public class MemberRepositoryV0 {
 	private void close(Connection con, Statement stmt, ResultSet rs) {
 		// Statement <- PreparedStatement(상속 관계)
 
-		if(rs != null) {
+		if (rs != null) {
 			try {
-				rs.close();		// SQLException
+				rs.close();        // SQLException
 			} catch (SQLException e) {
 				log.info("error", e);
 			}
 		}
 
-		if(stmt != null) {
+		if (stmt != null) {
 			try {
-				stmt.close();		// SQLException
+				stmt.close();        // SQLException
 			} catch (SQLException e) {
 				log.info("error", e);
 			}
 		}
 
-		if(con != null) {
+		if (con != null) {
 			try {
 				con.close();
 			} catch (SQLException e) {
